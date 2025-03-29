@@ -41,4 +41,3 @@ export const TaskProvider = ({ children }) => {
 };
 
 export default TaskContext;
-
