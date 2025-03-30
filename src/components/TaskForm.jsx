@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import TaskContext from "../context/TaskContext";
 
 function TaskForm() {
-  const { tasks, dispatch } = useContext(TaskContext);
+  const { dispatch } = useContext(TaskContext);
   const [input, setInput] = useState("");
   const [category, setCategory] = useState("");
   const [priority, setPriority] = useState("");
