@@ -52,7 +52,7 @@ const TaskItem = ({ task }) => {
         <div className="w-full">
           <h3
             className={`text-md md:text-lg font-medium ${
-              task.completed ? "line-through text-gray-400" : "text-gray-800"
+              task.completed ? "line-through text-gray-400" : "text-gray-500"
             }`}
           >
             {task.text}
