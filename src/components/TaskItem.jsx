@@ -30,7 +30,7 @@ const getPriorityClass = (priority) => {
   }
 };
 
-const TaskItem = ({ task }) => {
+function TaskItem({ task }) {
   const { dispatch } = useContext(TaskContext);
 
   return (
@@ -39,7 +39,7 @@ const TaskItem = ({ task }) => {
         task.category
       )} ${getPriorityClass(task.priority)} transition-all`}
     >
-      {/* Left Section - Checkbox & Task Info */}
+      {/* Task Content & Completion Toggle */}
       <div className="flex items-center gap-3 w-full">
         <input
           type="checkbox"
@@ -63,7 +63,7 @@ const TaskItem = ({ task }) => {
         </div>
       </div>
 
-      {/* Delete Button */}
+      {/* Delete Task Button */}
       <button
         onClick={() => dispatch({ type: "REMOVE_TASK", payload: task.id })}
         className="p-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition-all mt-2 md:mt-0 cursor-pointer"
@@ -72,6 +72,6 @@ const TaskItem = ({ task }) => {
       </button>
     </div>
   );
-};
+}
 
 export default TaskItem;
