@@ -86,4 +86,4 @@ If you liked this project, feel free to ⭐ star it!
 
 ## 📬 Contact
 
-Email: utheshini10@gmail.com
+Email: utheshni@gmail.com
