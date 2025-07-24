@@ -28,23 +28,6 @@ A sleek and minimal To-Do List web application built with **React**, **Vite**, a
 
 ---
 
-## 📂 Folder Structure
-
-src/
-│
-├── components/
-│ ├── TaskForm.jsx
-│ ├── TaskItem.jsx
-│ └── TaskList.jsx
-│
-├── context/
-│ └── TaskContext.jsx
-│
-├── App.jsx
-└── main.jsx
-
----
-
 ## 🧪 How It Works
 
 - Tasks are stored in a centralized state using `useReducer`.
