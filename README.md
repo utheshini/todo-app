@@ -4,7 +4,13 @@ A sleek and minimal To-Do List web application built with **React**, **Vite**, a
 
 ---
 
-## 🚀 Features
+## 🚀 Live Demo
+
+👉 [Click here to view the live demo](https://utheshni.github.io/todo-app/)
+
+---
+
+## ✨ Features
 
 - ✅ Add tasks with **title**, **category**, and **priority**
 - 📂 Categories: _Personal_, _Work_, _Shopping_

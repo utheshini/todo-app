@@ -57,8 +57,10 @@ function TaskItem({ task }) {
           >
             {task.text}
           </h3>
-          <p className="text-sm text-gray-500">
-            {task.category} | {task.priority}
+          <p className="text-sm text-gray-500 flex gap-1">
+            <span>{task.category}</span>
+            <span>|</span>
+            <span>{task.priority}</span>
           </p>
         </div>
       </div>

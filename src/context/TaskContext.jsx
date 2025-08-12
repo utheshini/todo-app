@@ -24,7 +24,7 @@ const taskReducer = (state, action) => {
   }
 };
 
-// Inside the component, useReducer is called
+// Inside the provider, useReducer is called
 export const TaskProvider = ({ children }) => {
   const [tasks, dispatch] = useReducer(taskReducer, initialState);
 
