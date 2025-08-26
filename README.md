@@ -46,10 +46,10 @@ A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring
 
 ```bash
 # Clone the repository
-  git clone https://github.com/utheshni/todo-list.git
+  git clone https://github.com/utheshni/todo-app.git
 
 # Navigate into the project directory
-  cd todo-list
+  cd todo-app
 
 # Install dependencies
   npm install
