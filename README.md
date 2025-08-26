@@ -1,6 +1,6 @@
-# 📝 To-Do List App
+# 📝 To-Do App
 
-A sleek and minimal To-Do List web application built with **React**, **Vite**, and **Tailwind CSS**. This personal project was developed to showcase front-end development skills, efficient state management using `useReducer`, and context API, with a focus on user-friendly UI/UX and persistent local storage.
+A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring dark mode, task categories, priorities, and full CRUD functionality. This project demonstrates clean code practices, state management with **Context API + useReducer**, and persistent data storage with **localStorage**.
 
 ---
 
@@ -12,14 +12,13 @@ A sleek and minimal To-Do List web application built with **React**, **Vite**, a
 
 ## ✨ Features
 
-- ✅ Add tasks with **title**, **category**, and **priority**
-- 📂 Categories: _Personal_, _Work_, _Shopping_
-- 🔥 Priorities: _Low_, _Medium_, _High_
-- 📌 Mark tasks as completed
-- 🗑️ Remove tasks
-- 💾 Data persists in **localStorage**
-- 🎨 Responsive UI with **Tailwind CSS**
-- ⚡ Built using **Vite** for fast development
+- ✅ Add, edit, delete, and mark tasks as complete
+- 🎨 Dark mode with persistence (saved in `localStorage`)
+- 📂 Categories (`Work`, `Study`, `Personal`)
+- 🔔 Priority levels (`High`, `Medium`, `Low`)
+- 📌 Task created timestamp and completion status
+- 💾 Persistent storage (tasks saved in `localStorage`)
+- ⚡ Responsive UI with **Tailwind CSS**
 
 ---
 
@@ -45,17 +44,19 @@ A sleek and minimal To-Do List web application built with **React**, **Vite**, a
 
 ## 📦 Installation
 
-- Clone the repository
+```bash
+# Clone the repository
   git clone https://github.com/utheshni/todo-list.git
 
-- Navigate into the project directory
+# Navigate into the project directory
   cd todo-list
 
-- Install dependencies
+# Install dependencies
   npm install
 
-- Run the app
+# Run the app
   npm run dev
+```
 
 ---
 
@@ -67,12 +68,12 @@ This project is licensed under the MIT License..
 
 ## 🙋‍♀️ About Me
 
-I’m a recent graduate passionate about front-end development. This is one of my portfolio projects to showcase my skills in React, Tailwind, and modern web development.
-
-If you liked this project, feel free to ⭐ star it!
+I’m a recent graduate and frontend developer fresher passionate about building real-world projects. This portfolio project showcases my skills in React.js, Tailwind CSS, and modern web development as I continue improving my UI and React expertise.
+Connect with me on [LinkedIn](https://linkedin.com/in/utheshni-uthayananth) or check out more of my work on [GitHub](https://github.com/utheshni).
 
 ---
 
-## 📬 Contact
+## ⭐ Support
 
-Email: utheshni@gmail.com
+If you liked this project, please consider giving it a ⭐ on [GitHub](https://github.com/utheshni/todo-app)!  
+It encourages me to keep building and sharing more projects.

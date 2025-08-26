@@ -7,10 +7,12 @@ function TaskList() {
   const { tasks } = useContext(TaskContext); // Access tasks from context
 
   return (
-    <div className="mt-10 max-w-3xl mx-auto bg-white shadow-md rounded-lg p-5">
+    <div>
       {tasks.length === 0 ? (
-         // Show message if no tasks are available
-        <p className="text-center text-gray-500 text-lg">No tasks added yet!</p>
+        // Show message if no tasks are available
+        <p className="py-16 text-lg text-center text-slate-500">
+          No tasks added yet!
+        </p>
       ) : (
         // Render a list of TaskItem components for each task
         <div className="space-y-4">

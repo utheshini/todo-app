@@ -1,20 +1,28 @@
+import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
 import { TaskProvider } from "./context/TaskContext";
 import TaskList from "./components/TaskList";
+import { ThemeProvider } from "./context/ThemeContext";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <TaskProvider>
-      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-10">
-        <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6">
-          <h1 className="text-3xl font-bold text-center text-gray-700 mb-6">
-            To-Do List
-          </h1>
-          <TaskForm />
-          <TaskList />
+    // Wrap app with theme and task providers
+    <ThemeProvider>
+      <TaskProvider>
+        <div
+          className="min-h-screen pb-4 text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-950
+          transition-colors duration-500"
+        >
+          <Header />
+          <main className="max-w-4xl mx-auto px-4">
+            <TaskForm />
+            <TaskList />
+          </main>
         </div>
-      </div>
-    </TaskProvider>
+        <Footer />
+      </TaskProvider>
+    </ThemeProvider>
   );
 }
 
