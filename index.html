@@ -4,13 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/todo-app/favicon.ico" />
-    <title>ToDo App</title>
+    <title>Todo App</title>
     <meta
       name="description"
       content="A simple and user-friendly ToDo app to create, manage, and track tasks easily—anytime, anywhere."
     />
-    <script type="module" crossorigin src="/todo-app/assets/index-BGVatoJm.js"></script>
-    <link rel="stylesheet" crossorigin href="/todo-app/assets/index-CJzYsXRN.css">
+    <script>
+      // Set initial theme before React loads
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <script type="module" crossorigin src="/todo-app/assets/index-DnpbG61J.js"></script>
+    <link rel="stylesheet" crossorigin href="/todo-app/assets/index-CswdOj-f.css">
   </head>
   <body>
     <div id="root"></div>
