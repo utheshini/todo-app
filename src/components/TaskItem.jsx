@@ -35,7 +35,6 @@ function TaskItem({ task }) {
       className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 
       rounded-2xl shadow-sm transition-colors duration-300"
     >
-      {/* Left side: checkbox, text, badges, timestamp */}
       <div className="flex items-start gap-3">
         <div className="relative w-5 h-5">
           <input
@@ -96,13 +95,14 @@ function TaskItem({ task }) {
             </div>
           </div>
 
+          {/* timestamp  */}
           <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
             Added {new Date(task.createdAt).toLocaleString()}
           </p>
         </div>
       </div>
 
-      {/* Right side: Edit/Save/Cancel/Delete buttons */}
+      {/* Edit/Save/Cancel/Delete buttons */}
       <div className="flex justify-center gap-2 md:justify-end md:items-center">
         {isEditing ? (
           <>

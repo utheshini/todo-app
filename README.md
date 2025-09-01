@@ -1,16 +1,16 @@
-# 📝 To-Do App
+# 📝 Todo App
 
 A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring dark mode, task categories, priorities, and full CRUD functionality. This project demonstrates clean code practices, state management with **Context API + useReducer**, and persistent data storage with **localStorage**.
 
 ---
 
-## 🚀 Live Demo
+## 🔗 Live Demo
 
-👉 [Click here to view the live demo](https://utheshni.github.io/todo-app/)
+👉 [Click here to view the live demo](https://utheshini.github.io/todo-app/)
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
 - ✅ Add, edit, delete, and mark tasks as complete
 - 🎨 Dark mode with persistence (saved in `localStorage`)
@@ -22,7 +22,7 @@ A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring
 
 ---
 
-## 🧠 Tech Stack
+## 🛠️ Tech Stack
 
 - **React** (Functional Components, Hooks)
 - **Vite** (Fast build tool)
@@ -46,7 +46,7 @@ A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring
 
 ```bash
 # Clone the repository
-  git clone https://github.com/utheshni/todo-app.git
+  git clone https://github.com/utheshini/todo-app.git
 
 # Navigate into the project directory
   cd todo-app
@@ -68,12 +68,16 @@ This project is licensed under the MIT License..
 
 ## 🙋‍♀️ About Me
 
-I’m a recent graduate and frontend developer fresher passionate about building real-world projects. This portfolio project showcases my skills in React.js, Tailwind CSS, and modern web development as I continue improving my UI and React expertise.
-Connect with me on [LinkedIn](https://linkedin.com/in/utheshni-uthayananth) or check out more of my work on [GitHub](https://github.com/utheshni).
+I’m a recent graduate and aspiring Frontend Developer passionate about building real-world projects. This portfolio project showcases my skills in **React.js**, **Tailwind CSS**, and modern web development as I continue improving my UI and React expertise.
 
 ---
 
-## ⭐ Support
+## 📬 Contact 
 
-If you liked this project, please consider giving it a ⭐ on [GitHub](https://github.com/utheshni/todo-app)!  
-It encourages me to keep building and sharing more projects.
+- **Email:** utheshini10@gmail.com  
+- **LinkedIn:** [LinkedIn](https://linkedin.com/in/utheshini-uthayananth)  
+- **GitHub:**  [GitHub](https://github.com/utheshini)  
+
+---
+
+✨ Thanks for visiting my project! Feel free to connect with me on LinkedIn.

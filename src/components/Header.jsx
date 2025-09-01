@@ -4,7 +4,7 @@ import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 import ThemeContext from "../context/ThemeContext";
 
 function Header() {
-  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <header className="sticky top-0 z-40 bg-white dark:bg-slate-900 shadow-sm">
@@ -21,12 +21,12 @@ function Header() {
         </div>
         {/* Theme toggle button */}
         <button
-          onClick={toggleDarkMode}
-          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-          className="p-3 border border-slate-200 dark:border-slate-700 rounded-full 
-           transition-colors duration-300 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800"
+          onClick={toggleTheme}
+          aria-label="Toggle Dark Mode"
+          className="p-3 border bg-slate-200 dark:bg-slate-700 border-slate-200 dark:border-slate-700 rounded-full 
+           transition-colors duration-300 cursor-pointer hover:opacity-80"
         >
-          {darkMode ? <IoSunnyOutline /> : <IoMoonOutline />}
+          {theme === "dark" ? <IoSunnyOutline /> : <IoMoonOutline />}
         </button>
       </div>
     </header>

@@ -1,4 +1,11 @@
 @import "tailwindcss";
 
-/* Enable custom dark variant for Tailwind using a `.dark` class */
+/* Enable dark mode variant */
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    /* Smooth transition when switching themes */
+    transition: background-color 0.3s, color 0.3s;
+  }
+}

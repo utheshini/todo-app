@@ -30,7 +30,12 @@ function TaskForm() {
       return;
     }
     if (!/[a-zA-Z0-9]/.test(input)) {
-      alert("Task name must contain at least one letter or number.");
+      alert("Task name must contain at least one letter.");
+      return;
+    }
+
+    if (category === null || priority === null) {
+      alert("Select Category and Priority.");
       return;
     }
 
