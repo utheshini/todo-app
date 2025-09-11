@@ -75,7 +75,6 @@ function TaskForm() {
         placeholder="Enter a task... "
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && handleSave()}
         className="w-full md:w-1/4 p-2 text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 
         border border-slate-300 dark:border-slate-700 rounded-xl transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
       />
@@ -90,7 +89,7 @@ function TaskForm() {
         value={category?.value || ""}
         onChange={(e) => {
           const selected = CATEGORIES.find(
-            (cat) => cat.value === e.target.value
+            (category) => category.value === e.target.value
           );
           setCategory(selected);
         }}
@@ -114,7 +113,7 @@ function TaskForm() {
         name="priority"
         value={priority?.value || ""}
         onChange={(e) => {
-          const selected = PRIORITIES.find((p) => p.value === e.target.value);
+          const selected = PRIORITIES.find((priority) => priority.value === e.target.value);
           setPriority(selected);
         }}
         className="w-full md:w-1/4 p-2 bg-white dark:bg-slate-800 border border-slate-300  dark:border-slate-700 
