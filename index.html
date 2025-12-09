@@ -11,9 +11,11 @@
     />
     <script>
       // Set initial theme before React loads
+      const savedTheme = localStorage.getItem("theme");
+
       if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
+        savedTheme === "dark" ||
+        (!savedTheme &&
           window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
         document.documentElement.classList.add("dark");
@@ -21,8 +23,8 @@
         document.documentElement.classList.remove("dark");
       }
     </script>
-    <script type="module" crossorigin src="/todo-app/assets/index-DnpbG61J.js"></script>
-    <link rel="stylesheet" crossorigin href="/todo-app/assets/index-CswdOj-f.css">
+    <script type="module" crossorigin src="/todo-app/assets/index-C4qXE8mQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/todo-app/assets/index-CHSPDP7g.css">
   </head>
   <body>
     <div id="root"></div>
