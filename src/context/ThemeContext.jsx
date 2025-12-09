@@ -4,7 +4,7 @@ import { createContext, useState, useEffect } from "react";
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  // Get initial theme from localStorage OR system preference
+  // Get initial theme from localStorage or system preference
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) return savedTheme;

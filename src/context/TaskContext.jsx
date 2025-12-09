@@ -1,10 +1,17 @@
-import { createContext, useReducer, useEffect } from "react";
+import { createContext, useReducer, useEffect, useState } from "react";
 
-// // Create Context
+// Create Context
 const TaskContext = createContext();
 
-// Initial state from localStorage or empty array
-const initialState = JSON.parse(localStorage.getItem("tasks")) || [];
+// Load initial state from Local Storage or reset to empty array
+let initialState = [];
+
+try {
+  const data = localStorage.getItem("tasks");
+  initialState = data ? JSON.parse(data) : [];
+} catch {
+  initialState = [];
+}
 
 // Reducer to handle task actions
 const taskReducer = (state, action) => {
@@ -25,25 +32,81 @@ const taskReducer = (state, action) => {
           ? { ...task, completed: !task.completed }
           : task
       );
+    case "CLEAR_TASKS":
+      return [];
     default:
       return state;
   }
 };
 
 // Provider component to wrap the app
-export const TaskProvider = ({ children }) => {
+export function TaskProvider({ children }) {
   const [tasks, dispatch] = useReducer(taskReducer, initialState);
+
+  // States for filtering, sorting, and searching tasks
+  const [filterStatus, setFilterStatus] = useState("all");
+  const [filterCategory, setFilterCategory] = useState("all");
+  const [filterPriority, setFilterPriority] = useState("all");
+  const [sortOption, setSortOption] = useState("date");
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Persist tasks to Local Storage
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  // Apply filtering, searching, and sorting to the task list
+  const filteredTasks = tasks
+    .filter((task) => {
+      // Filter by completion status
+      if (filterStatus === "active") return !task.completed;
+      if (filterStatus === "completed") return task.completed;
+      return true;
+    })
+    .filter((task) => {
+      // Filter by category
+      if (filterCategory === "all") return true;
+      return task.category.value === filterCategory;
+    })
+    .filter((task) => {
+      // Filter by priority
+      if (filterPriority === "all") return true;
+      return task.priority.value === filterPriority;
+    })
+    .filter((task) =>
+      // Search tasks by keyword
+      task.text.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .sort((a, b) => {
+      // Sort tasks by priority or date
+      if (sortOption === "priority") {
+        const order = { high: 1, medium: 2, low: 3 };
+        return order[a.priority.value] - order[b.priority.value];
+      }
+      return b.createdAt - a.createdAt;
+    });
+
   return (
-    <TaskContext.Provider value={{ tasks, dispatch }}>
+    <TaskContext.Provider
+      value={{
+        tasks,
+        dispatch,
+        filteredTasks,
+        filterStatus,
+        setFilterStatus,
+        searchTerm,
+        setSearchTerm,
+        filterCategory,
+        setFilterCategory,
+        filterPriority,
+        setFilterPriority,
+        sortOption,
+        setSortOption,
+      }}
+    >
       {children}
     </TaskContext.Provider>
   );
-};
+}
 
 export default TaskContext;

@@ -1,6 +1,6 @@
 # 📝 Todo App
 
-A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring dark mode, task categories, priorities, and full CRUD functionality. This project demonstrates clean code practices, state management with **Context API + useReducer**, and persistent data storage with **localStorage**.
+A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring dark mode, search by keyword, filter and sort tasks, and full CRUD functionality. This project demonstrates clean code practices, state management with **Context API + useReducer**, and persistent data storage with **localStorage**.
 
 ---
 
@@ -13,10 +13,13 @@ A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring
 ## 🚀 Features
 
 - ✅ Add, edit, delete, and mark tasks as complete
+- 🔍 Search tasks by keyword (real-time filtering)
 - 🎨 Dark mode with persistence (saved in `localStorage`)
 - 📂 Categories (`Work`, `Study`, `Personal`)
 - 🔔 Priority levels (`High`, `Medium`, `Low`)
-- 📌 Task created timestamp and completion status
+- 🔄 Filter tasks by status, category, and priority
+- ↕️ Sort tasks by date or priority
+- 📌 Task creation timestamp and completion status
 - 💾 Persistent storage (tasks saved in `localStorage`)
 - ⚡ Responsive UI with **Tailwind CSS**
 
@@ -35,10 +38,11 @@ A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring
 
 ## 🧪 How It Works
 
-- Tasks are stored in a centralized state using `useReducer`.
-- The state is shared across components using `TaskContext`.
-- On every state update, tasks are stored in `localStorage`.
-- Tasks are retrieved from `localStorage` on app load.
+- Tasks are managed globally using `useReducer` inside `TaskContext`.
+- Filters (status, category, priority) and search are controlled via state.
+- The app applies chained filtering and sorting logic to display relevant tasks dynamically.
+- User preferences (theme and tasks) are persisted using `localStorage`.
+- All UI changes and data updates happen in real time.
 
 ---
 
@@ -68,7 +72,7 @@ This project is licensed under the MIT License..
 
 ## 🙋‍♀️ About Me
 
-I’m a recent graduate and aspiring Frontend Developer passionate about building real-world projects. This portfolio project showcases my skills in **React.js**, **Tailwind CSS**, and modern web development as I continue improving my UI and React expertise.
+I’m a recent graduate and aspiring **Frontend Developer** passionate about building real-world projects. This portfolio project showcases my skills in **React.js**, **Tailwind CSS**, and **modern web development**,with a focus on user-friendly design, state management, and responsive layouts.
 
 ---
 

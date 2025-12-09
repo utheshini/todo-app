@@ -1,9 +1,10 @@
 import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
-import { TaskProvider } from "./context/TaskContext";
 import TaskList from "./components/TaskList";
-import { ThemeProvider } from "./context/ThemeContext";
+import TaskFilters from "./components/TaskFilters";
 import Footer from "./components/Footer";
+import { TaskProvider } from "./context/TaskContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
           transition-colors duration-500"
         >
           <Header />
-          <main className="max-w-4xl mx-auto px-4">
+          <main className="max-w-4xl mx-auto px-4 text-xs md:text-sm">
             <TaskForm />
+            <TaskFilters />
             <TaskList />
           </main>
         </div>

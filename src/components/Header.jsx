@@ -21,6 +21,7 @@ function Header() {
         </div>
         {/* Theme toggle button */}
         <button
+          type="button"
           onClick={toggleTheme}
           aria-label="Toggle Dark Mode"
           className="p-3 border bg-slate-200 dark:bg-slate-700 border-slate-200 dark:border-slate-700 rounded-full 
