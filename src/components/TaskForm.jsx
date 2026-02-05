@@ -1,18 +1,6 @@
 import { useContext, useState } from "react";
 import TaskContext from "../context/TaskContext";
-
-// Task categories and priorities options
-const CATEGORY_OPTIONS = [
-  { value: "work", label: "Work" },
-  { value: "study", label: "Study" },
-  { value: "personal", label: "Personal" },
-];
-
-const PRIORITY_OPTIONS = [
-  { value: "low", label: "Low" },
-  { value: "medium", label: "Medium" },
-  { value: "high", label: "High" },
-];
+import { CATEGORY_OPTIONS, PRIORITY_OPTIONS } from "../constants/options";
 
 function TaskForm() {
   const { dispatch } = useContext(TaskContext);
@@ -88,7 +76,7 @@ function TaskForm() {
         value={category?.value || ""}
         onChange={(e) => {
           const selected = CATEGORY_OPTIONS.find(
-            (category) => category.value === e.target.value
+            (category) => category.value === e.target.value,
           );
           setCategory(selected);
         }}
@@ -112,7 +100,7 @@ function TaskForm() {
         value={priority?.value || ""}
         onChange={(e) => {
           const selected = PRIORITY_OPTIONS.find(
-            (priority) => priority.value === e.target.value
+            (priority) => priority.value === e.target.value,
           );
           setPriority(selected);
         }}

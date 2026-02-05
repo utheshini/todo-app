@@ -2,7 +2,10 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="px-2 py-6 text-xs md:text-sm text-center text-slate-400 dark:text-slate-600 bg-slate-100 dark:bg-slate-950/95">
+    <footer
+      className="px-2 py-6 text-xs md:text-sm text-center text-slate-400 dark:text-slate-600 dark:bg-slate-950 
+      border-t border-slate-200 dark:border-slate-800"
+    >
       <p>
         &copy; {currentYear} Utheshini Uthayananth. Built with React & Tailwind
         CSS.

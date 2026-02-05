@@ -37,11 +37,13 @@ function TaskList() {
         </div>
       ) : (
         // Render a list of TaskItem components for each task
-        <div className="space-y-4">
+        <ul className="space-y-4">
           {filteredTasks.map((task) => (
-            <TaskItem key={task.id} task={task} />
+            <li key={task.id}>
+              <TaskItem task={task} />
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

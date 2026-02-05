@@ -12,17 +12,17 @@ function App() {
     <ThemeProvider>
       <TaskProvider>
         <div
-          className="min-h-screen pb-4 text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-950
-          transition-colors duration-500"
+          className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950
+          text-slate-900 dark:text-slate-100 transition-colors duration-500"
         >
           <Header />
-          <main className="max-w-4xl mx-auto px-4 text-xs md:text-sm">
+          <main className="flex-1 max-w-4xl mx-auto px-4 pb-6 text-xs md:text-sm">
             <TaskForm />
             <TaskFilters />
             <TaskList />
           </main>
+          <Footer />
         </div>
-        <Footer />
       </TaskProvider>
     </ThemeProvider>
   );
