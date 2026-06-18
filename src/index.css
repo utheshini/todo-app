@@ -6,14 +6,17 @@
 /* Base styles */
 @layer base {
   html {
+    /* Show vertical scrollbar space to prevent layout shift */
+    overflow-y: scroll;
     /* Smooth transition when switching themes */
-    transition: background-color 0.3s, color 0.3s;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 }
 
 /* Custom reusable components */
 @layer components {
-
   /* Form inputs styling */
   .form-input {
     @apply w-full md:w-1/4 p-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl transition-colors 

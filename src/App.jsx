@@ -16,7 +16,7 @@ function App() {
           text-slate-900 dark:text-slate-100 transition-colors duration-500"
         >
           <Header />
-          <main className="flex-1 max-w-4xl mx-auto px-4 pb-6 text-xs md:text-sm">
+          <main className="flex-1 w-full max-w-4xl mx-auto px-2 md:px-4 pb-6 text-sm md:text-base">
             <TaskForm />
             <TaskFilters />
             <TaskList />

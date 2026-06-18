@@ -66,7 +66,7 @@ A modern, responsive **Todo App** built with **React + Tailwind CSS**, featuring
 
 ## 📄 License
 
-This project is licensed under the MIT License..
+This project is licensed under the MIT License.
 
 ---
 

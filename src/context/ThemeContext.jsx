@@ -22,6 +22,9 @@ export function ThemeProvider({ children }) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
+
+    // Ensure browser UI matches current theme
+    document.documentElement.style.colorScheme = theme;
   }, [theme]);
 
   // Toggle theme

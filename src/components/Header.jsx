@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-white dark:bg-slate-900 shadow-sm">
-      <div className="flex items-center justify-between max-w-4xl mx-auto p-4">
+      <div className="flex items-center justify-between max-w-4xl mx-auto px-4 h-14 md:h-16">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 text-white bg-purple-600 rounded-2xl grid place-items-center">
@@ -24,10 +24,10 @@ function Header() {
           type="button"
           onClick={toggleTheme}
           aria-label="Toggle Dark Mode"
-          className="p-3 border bg-slate-200 dark:bg-slate-700 border-slate-200 dark:border-slate-700 rounded-full 
-           transition-colors duration-300 cursor-pointer hover:opacity-80"
+          className="p-1 md:p-2 border bg-slate-200 dark:bg-slate-700 border-slate-200 dark:border-slate-700 rounded-full 
+          transition-colors duration-300 cursor-pointer hover:opacity-80"
         >
-          {theme === "dark" ? <IoSunnyOutline /> : <IoMoonOutline />}
+          {theme === "dark" ? <IoSunnyOutline className="w-4 h-4" /> : <IoMoonOutline className="w-4 h-4" />}
         </button>
       </div>
     </header>

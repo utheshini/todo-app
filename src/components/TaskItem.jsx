@@ -21,11 +21,28 @@ function TaskItem({ task }) {
   const { dispatch } = useContext(TaskContext);
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(task.text);
+  const [editError, setEditError] = useState("");
 
   // Save edited task
   const handleSave = () => {
+    if (editText.trim() === "") {
+      setEditError("Task name cannot be empty.");
+      return;
+    }
+
+    if (editText.trim().length > 100) {
+      setEditError("Task name must be under 100 characters.");
+      return;
+    }
+
+    if (!/[a-zA-Z0-9]/.test(editText)) {
+      setEditError("Task name must contain a letter or number.");
+      return;
+    }
+
     if (editText.trim() !== "") {
       dispatch({ type: "EDIT_TASK", payload: { id: task.id, text: editText } });
+      setEditError("");
       setIsEditing(false);
     }
   };
@@ -71,16 +88,25 @@ function TaskItem({ task }) {
             {isEditing ? (
               <input
                 type="text"
+                required
+                maxLength={100}
                 value={editText}
-                onChange={(e) => setEditText(e.target.value)}
+                onChange={(e) => {
+                  setEditText(e.target.value);
+                  setEditError("");
+                }}
                 onKeyDown={(e) => e.key === "Enter" && handleSave()}
                 autoFocus
-                className="p-1 text-sm md:text-base bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md
-                transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className={`p-1 text-sm md:text-base bg-white dark:bg-slate-800 border rounded-md
+                transition-colors duration-300 focus:outline-none focus:ring-2 ${
+                  editError
+                    ? "border-red-500 focus:ring-red-500"
+                    : "border-slate-300 dark:border-slate-700 focus:ring-purple-500"
+                }`}
               />
             ) : (
               <h2
-                className={`max-w-xs md:max-w-md break-all text-sm md:text-base font-semibold  ${
+                className={`max-w-xs md:max-w-md break-words text-sm md:text-base font-semibold  ${
                   task.completed
                     ? "line-through text-slate-500 dark:text-slate-400 [text-decoration-thickness:1px]"
                     : "text-slate-600 dark:text-slate-300"
@@ -100,6 +126,15 @@ function TaskItem({ task }) {
               </span>
             </div>
           </div>
+
+          {editError && (
+            <p
+              role="alert"
+              className="mt-2 text-sm text-center md:text-left text-red-500"
+            >
+              {editError}
+            </p>
+          )}
 
           {/* timestamp  */}
           <p className="mt-2 font-[10px] md:text-xs text-slate-500 dark:text-slate-400">
@@ -126,6 +161,7 @@ function TaskItem({ task }) {
               onClick={() => {
                 setIsEditing(false);
                 setEditText(task.text);
+                setEditError("");
               }}
               aria-label="Cancel editing task"
               className="p-2 text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-500/15 rounded-xl

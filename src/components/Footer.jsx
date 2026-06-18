@@ -3,30 +3,32 @@ function Footer() {
 
   return (
     <footer
-      className="px-2 py-6 text-xs md:text-sm text-center text-slate-400 dark:text-slate-600 dark:bg-slate-950 
+      className="px-2 py-6 text-sm text-center text-slate-400 dark:text-slate-600 dark:bg-slate-950 
       border-t border-slate-200 dark:border-slate-800"
     >
-      <p>
-        &copy; {currentYear} Utheshini Uthayananth. Built with React & Tailwind
-        CSS.
-      </p>
-      <div className="flex justify-center gap-4 mt-2">
-        <a
-          href="https://github.com/utheshini/todo-app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="transition-colors duration-300 hover:text-purple-700 dark:hover:text-purple-400"
-        >
-          GitHub
-        </a>
-        <a
-          href="https://linkedin.com/in/utheshini-uthayananth"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="transition-colors duration-300 hover:text-purple-700 dark:hover:text-purple-400"
-        >
-          LinkedIn
-        </a>
+      <div className="max-w-4xl mx-auto px-4">
+        <p>
+          © {currentYear} Utheshini Uthayananth. Built with React &
+          Tailwind CSS.
+        </p>
+        <div className="flex justify-center gap-4 mt-2">
+          <a
+            href="https://github.com/utheshini/todo-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors duration-300 hover:text-purple-700 dark:hover:text-purple-400"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/utheshini-uthayananth"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors duration-300 hover:text-purple-700 dark:hover:text-purple-400"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
     </footer>
   );
